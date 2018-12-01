@@ -1,21 +1,22 @@
 import datetime
-
 now = datetime.datetime.now()
+print "-" * 25
+print now
+print now.year
+print now.month
+print now.day
+print now.hour
+print now.minute
+print now.second
 
-print
-print "Current date and time using str method of datetime object:"
-print str(now)
+print "-" * 25
+print "1 week ago was it: ", now - datetime.timedelta(weeks=1)
+print "100 days ago was: ", now - datetime.timedelta(days=100)
+print "1 week from now is it: ",  now + datetime.timedelta(weeks=1)
+print "In 1000 days from now is it: ", now + datetime.timedelta(days=1000)
 
-print
-print "Current date and time using instance attributes:"
-print "Current year: %d" % now.year
-print "Current month: %d" % now.month
-print "Current day: %d" % now.day
-print "Current hour: %d" % now.hour
-print "Current minute: %d" % now.minute
-print "Current second: %d" % now.second
-print "Current microsecond: %d" % now.microsecond
+print "-" * 25
+birthday = datetime.datetime(2012,11,04)
 
-print
-print "Current date and time using strftime:"
-print now.strftime("%Y-%m-%d %H:%M")
+print "Birthday in ... ", birthday - now
+print "-" * 25
